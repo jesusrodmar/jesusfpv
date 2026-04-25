@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { getRoute } from "@/lib/navigate";
 
 const NEON = "#CCFF00";
@@ -60,7 +61,12 @@ export default function HomePage() {
           Especialistas en drones y FPV, Cinemáticos
         </p>
 
-        <h1 style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "clamp(3rem, 10vw, 8rem)", fontWeight: 900, lineHeight: 1.0, letterSpacing: "-0.02em", color: "#fff", textTransform: "uppercase", marginBottom: "0.5rem" }}>
+        <div style={{ display: "flex", gap: "2rem", alignItems: "center", justifyContent: "center", marginBottom: "2rem", flexWrap: "wrap" }}>
+          <Image src="/pavo20pro.png" alt="Pavo 20 Pro" width={220} height={160} style={{ objectFit: "contain", borderRadius: 8 }} />
+          <Image src="/vapord5.png" alt="Vapor D5" width={220} height={160} style={{ objectFit: "contain", borderRadius: 8 }} />
+        </div>
+
+        <h1 style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "clamp(2.2rem, 7vw, 5.5rem)", fontWeight: 900, lineHeight: 1.0, letterSpacing: "-0.02em", color: "#fff", textTransform: "uppercase", marginBottom: "0.5rem" }}>
           DOMINA EL<br />CIELO CON<br />
           <span style={{ background: `linear-gradient(90deg, ${NEON}, ${PINK})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>ESTILO</span>
         </h1>

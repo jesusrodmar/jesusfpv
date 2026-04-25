@@ -44,6 +44,11 @@ export const metadata: Metadata = {
     description: "El hub de referencia para FPV cinemático en español.",
     images: ["/logo.png"],
   },
+  icons: {
+    icon: "/favicon150x150.png",
+    shortcut: "/favicon150x150.png",
+    apple: "/favicon150x150.png",
+  },
   robots: {
     index: true,
     follow: true,
