@@ -62,8 +62,8 @@ export default function HomePage() {
         </p>
 
         <div style={{ display: "flex", gap: "2rem", alignItems: "center", justifyContent: "center", marginBottom: "2rem", flexWrap: "wrap" }}>
-          <Image src="/pavo20pro.png" alt="Pavo 20 Pro" width={220} height={160} style={{ objectFit: "contain", borderRadius: 8 }} />
-          <Image src="/vapord5.png" alt="Vapor D5" width={220} height={160} style={{ objectFit: "contain", borderRadius: 8 }} />
+          <Image src="/pavo20pro.png" alt="Pavo 20 Pro" width={220} height={160} style={{ objectFit: "contain" }} />
+          <Image src="/vapord5.png" alt="Vapor D5" width={220} height={160} style={{ objectFit: "contain" }} />
         </div>
 
         <h1 style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "clamp(2.2rem, 7vw, 5.5rem)", fontWeight: 900, lineHeight: 1.0, letterSpacing: "-0.02em", color: "#fff", textTransform: "uppercase", marginBottom: "0.5rem" }}>
