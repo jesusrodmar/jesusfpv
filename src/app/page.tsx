@@ -47,38 +47,56 @@ export default function HomePage() {
       <section style={{
         minHeight: "100vh",
         background: BG,
-        display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center",
-        textAlign: "center",
-        padding: "calc(64px + clamp(3rem,8vw,6rem)) clamp(1.5rem,5vw,4rem) clamp(3rem,8vw,6rem)",
+        display: "flex", alignItems: "center",
+        padding: "calc(64px + clamp(2rem,5vw,4rem)) clamp(1.5rem,5vw,6rem) clamp(2rem,5vw,4rem)",
         position: "relative", overflow: "hidden",
       }}>
-        <div style={{ position: "absolute", top: "40%", left: "50%", transform: "translate(-50%,-50%)", width: 800, height: 800, borderRadius: "50%", background: "radial-gradient(circle, rgba(204,255,0,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
+        {/* Glow neon izquierda */}
+        <div style={{ position: "absolute", top: "50%", left: "-5%", transform: "translateY(-50%)", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(204,255,0,0.07) 0%, transparent 70%)", pointerEvents: "none" }} />
+        {/* Glow pink derecha */}
+        <div style={{ position: "absolute", top: "50%", right: "0%", transform: "translateY(-50%)", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(255,0,255,0.1) 0%, transparent 65%)", pointerEvents: "none" }} />
 
-        <p style={{ fontFamily: '"Exo 2", sans-serif', fontWeight: 600, fontSize: "clamp(0.85rem, 1.5vw, 1rem)", color: NEON, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "1.5rem" }}>
-          Experto en drones y FPV Cinemáticos
-        </p>
+        <div style={{ maxWidth: 1280, width: "100%", margin: "0 auto", display: "flex", alignItems: "center", flexWrap: "wrap", gap: "clamp(2rem,4vw,3rem)" }}>
 
-        <h1 style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "clamp(2.2rem, 7vw, 5.5rem)", fontWeight: 900, lineHeight: 1.0, letterSpacing: "-0.02em", color: "#fff", textTransform: "uppercase", marginBottom: "0.5rem" }}>
-          DOMINA EL<br />CIELO CON<br />
-          <span style={{ background: `linear-gradient(90deg, ${NEON}, ${PINK})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>ESTILO</span>
-        </h1>
+          {/* COLUMNA IZQUIERDA: texto + CTA */}
+          <div style={{ flex: "1 1 340px", maxWidth: 560 }}>
+            <p style={{ fontFamily: '"Exo 2", sans-serif', fontWeight: 700, fontSize: "clamp(0.72rem, 1.2vw, 0.88rem)", color: NEON, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "1.5rem" }}>
+              Experto en drones y FPV Cinemáticos
+            </p>
 
-        <p style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "clamp(0.95rem, 1.8vw, 1.15rem)", color: TEXT, lineHeight: 1.7, maxWidth: 560, margin: "2rem auto 3rem" }}>
-          Aprende a volar, montar y configurar drones FPV, realizar grabaciones cinematográficas y ediciones profesionales con fluidez, precisión y calidad.
-        </p>
+            <h1 style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "clamp(2.8rem, 7vw, 5.8rem)", fontWeight: 900, lineHeight: 0.95, letterSpacing: "-0.02em", color: "#fff", textTransform: "uppercase", marginBottom: "0.5rem" }}>
+              DOMINA EL<br />CIELO CON<br />
+              <span style={{ background: `linear-gradient(90deg, ${NEON}, ${PINK})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>ESTILO</span>
+            </h1>
 
-        <button
-          onClick={() => navigate("empezar")}
-          style={{ background: NEON, border: "none", cursor: "pointer", fontFamily: '"Exo 2", sans-serif', fontWeight: 800, fontSize: "1rem", letterSpacing: "0.06em", color: "#000", padding: "16px 40px", borderRadius: 6, transition: "background 0.2s, transform 0.2s" }}
-          onMouseEnter={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.background = PINK; b.style.color = "#fff"; b.style.transform = "translateY(-2px)"; }}
-          onMouseLeave={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.background = NEON; b.style.color = "#000"; b.style.transform = "none"; }}
-        >
-          Guía PDF GRATIS
-        </button>
+            <p style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "clamp(0.92rem, 1.5vw, 1.05rem)", color: TEXT, lineHeight: 1.75, marginTop: "2rem", marginBottom: "2.5rem", maxWidth: 480 }}>
+              Aprende a volar, montar y configurar drones FPV, realizar grabaciones cinematográficas y ediciones profesionales con fluidez, precisión y calidad.
+            </p>
 
-        <div style={{ display: "flex", gap: "2rem", alignItems: "center", justifyContent: "center", marginTop: "3rem", flexWrap: "wrap" }}>
-          <Image src="/pavo20pro.png" alt="Pavo 20 Pro" width={220} height={160} style={{ objectFit: "contain" }} />
-          <Image src="/vapord5.png" alt="Vapor D5" width={220} height={160} style={{ objectFit: "contain" }} />
+            <button
+              onClick={() => navigate("empezar")}
+              style={{ background: NEON, border: "none", cursor: "pointer", fontFamily: '"Exo 2", sans-serif', fontWeight: 800, fontSize: "1rem", letterSpacing: "0.06em", color: "#000", padding: "16px 40px", borderRadius: 6, transition: "background 0.2s, transform 0.2s", display: "inline-block" }}
+              onMouseEnter={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.background = PINK; b.style.color = "#fff"; b.style.transform = "translateY(-2px)"; }}
+              onMouseLeave={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.background = NEON; b.style.color = "#000"; b.style.transform = "none"; }}
+            >
+              Empieza ahora →
+            </button>
+          </div>
+
+          {/* COLUMNA DERECHA: imagen drone */}
+          <div style={{ flex: "1 1 340px", position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            {/* Halo detrás del drone */}
+            <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 55% 50%, rgba(255,0,255,0.18) 0%, rgba(204,255,0,0.06) 50%, transparent 75%)", pointerEvents: "none" }} />
+            <Image
+              src="/pavo20pro.png"
+              alt="Drone FPV Pavo 20 Pro"
+              width={660}
+              height={500}
+              style={{ objectFit: "contain", width: "100%", height: "auto", maxWidth: 620, position: "relative", filter: "drop-shadow(0 0 70px rgba(255,0,255,0.45)) drop-shadow(0 0 30px rgba(204,255,0,0.2))" }}
+              priority
+            />
+          </div>
+
         </div>
       </section>
 
