@@ -51,12 +51,7 @@ export default function HomePage() {
         padding: "calc(64px + clamp(2rem,5vw,4rem)) clamp(1.5rem,5vw,6rem) clamp(2rem,5vw,4rem)",
         position: "relative", overflow: "hidden",
       }}>
-        {/* Glow neon izquierda */}
-        <div style={{ position: "absolute", top: "50%", left: "-5%", transform: "translateY(-50%)", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(204,255,0,0.07) 0%, transparent 70%)", pointerEvents: "none" }} />
-        {/* Glow pink derecha */}
-        <div style={{ position: "absolute", top: "50%", right: "0%", transform: "translateY(-50%)", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(255,0,255,0.1) 0%, transparent 65%)", pointerEvents: "none" }} />
-
-        <div style={{ maxWidth: 1280, width: "100%", margin: "0 auto", display: "flex", alignItems: "center", flexWrap: "wrap", gap: "clamp(2rem,4vw,3rem)" }}>
+<div style={{ maxWidth: 1280, width: "100%", margin: "0 auto", display: "flex", alignItems: "center", flexWrap: "wrap", gap: "clamp(2rem,4vw,3rem)" }}>
 
           {/* COLUMNA IZQUIERDA: texto + CTA */}
           <div style={{ flex: "1 1 340px", maxWidth: 560, textAlign: "center" }}>
