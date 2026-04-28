@@ -14,8 +14,8 @@ const MUTED = "#808080";
 
 const categories = [
   { icon: "🎬", image: "/iniciacionAlFPV.png", label: "Iniciación al FPV", desc: "Conceptos básicos, simuladores y primeros pasos para volar con fluidez y seguridad.", page: "empezar" },
-  { icon: "📋", label: "Normativa y AESA", desc: "Requisitos legales, seguros y gestión documental para operar de forma profesional en España.", page: "normativa" },
-  { icon: "🔧", label: "Guías", desc: "Tutoriales paso a paso, montajes y configuraciones para sacar el máximo partido a tu equipo FPV.", page: "guias" },
+  { icon: "📋", image: "/normativa.png", label: "Normativa y AESA", desc: "Requisitos legales, seguros y gestión documental para operar de forma profesional en España.", page: "normativa" },
+  { icon: "🔧", image: "/guias.png", label: "Guías", desc: "Tutoriales paso a paso, montajes y configuraciones para sacar el máximo partido a tu equipo FPV.", page: "guias" },
 ];
 
 const recentPosts = [
