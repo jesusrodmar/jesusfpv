@@ -79,7 +79,7 @@ export default function HomePage() {
               onMouseEnter={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.background = PINK; b.style.color = "#fff"; b.style.transform = "translateY(-2px)"; }}
               onMouseLeave={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.background = NEON; b.style.color = "#000"; b.style.transform = "none"; }}
             >
-              Empieza ahora →
+              Guía PDF GRATIS
             </button>
           </div>
 
