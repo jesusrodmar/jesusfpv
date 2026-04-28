@@ -81,7 +81,6 @@ const links = [
       { label: "Gestión operaciones", page: "normativa" },
     ],
   },
-  { label: "Noticias", page: "blog" },
   { label: "Contacto", page: "contacto" },
 ];
 

@@ -45,9 +45,9 @@ export const metadata: Metadata = {
     images: ["/logo.png"],
   },
   icons: {
-    icon: "/favicon150x150.png",
-    shortcut: "/favicon150x150.png",
-    apple: "/favicon150x150.png",
+    icon: "/favicon2_150x150.png",
+    shortcut: "/favicon2_150x150.png",
+    apple: "/favicon2_150x150.png",
   },
   robots: {
     index: true,

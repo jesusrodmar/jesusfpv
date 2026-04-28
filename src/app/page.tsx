@@ -14,11 +14,8 @@ const MUTED = "#808080";
 
 const categories = [
   { icon: "🎬", label: "Iniciación al FPV", desc: "Conceptos básicos, simuladores y primeros pasos para volar con fluidez y seguridad.", page: "empezar" },
-  { icon: "🔧", label: "Montajes Cinewhoop", desc: "Construye drones diseñados para llevar cámaras de cine, GoPro y volar cerca de personas.", page: "guias" },
   { icon: "📋", label: "Normativa y AESA", desc: "Requisitos legales, seguros y gestión documental para operar de forma profesional en España.", page: "normativa" },
-  { icon: "👓", label: "Gafas y Sistemas HD", desc: "Comparativas de sistemas digitales (DJI, Walksnail) para la mejor calidad de imagen.", page: "tienda" },
-  { icon: "⚙️", label: "Ajustes Cinemáticos", desc: "Configuración de PIDs, filtros y rates en Betaflight para lograr movimientos suaves de cámara.", page: "guias" },
-  { icon: "📰", label: "Noticias del Sector", desc: "Últimos lanzamientos de cámaras de acción, drones BNF comerciales y actualizaciones de software.", page: "blog" },
+  { icon: "🔧", label: "Guías", desc: "Tutoriales paso a paso, montajes y configuraciones para sacar el máximo partido a tu equipo FPV.", page: "guias" },
 ];
 
 const recentPosts = [
@@ -61,11 +58,6 @@ export default function HomePage() {
           Especialistas en drones y FPV, Cinemáticos
         </p>
 
-        <div style={{ display: "flex", gap: "2rem", alignItems: "center", justifyContent: "center", marginBottom: "2rem", flexWrap: "wrap" }}>
-          <Image src="/pavo20pro.png" alt="Pavo 20 Pro" width={220} height={160} style={{ objectFit: "contain" }} />
-          <Image src="/vapord5.png" alt="Vapor D5" width={220} height={160} style={{ objectFit: "contain" }} />
-        </div>
-
         <h1 style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "clamp(2.2rem, 7vw, 5.5rem)", fontWeight: 900, lineHeight: 1.0, letterSpacing: "-0.02em", color: "#fff", textTransform: "uppercase", marginBottom: "0.5rem" }}>
           DOMINA EL<br />CIELO CON<br />
           <span style={{ background: `linear-gradient(90deg, ${NEON}, ${PINK})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>ESTILO</span>
@@ -81,8 +73,13 @@ export default function HomePage() {
           onMouseEnter={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.background = PINK; b.style.color = "#fff"; b.style.transform = "translateY(-2px)"; }}
           onMouseLeave={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.background = NEON; b.style.color = "#000"; b.style.transform = "none"; }}
         >
-          Empieza aquí →
+          Guía PDF GRATIS
         </button>
+
+        <div style={{ display: "flex", gap: "2rem", alignItems: "center", justifyContent: "center", marginTop: "3rem", flexWrap: "wrap" }}>
+          <Image src="/pavo20pro.png" alt="Pavo 20 Pro" width={220} height={160} style={{ objectFit: "contain" }} />
+          <Image src="/vapord5.png" alt="Vapor D5" width={220} height={160} style={{ objectFit: "contain" }} />
+        </div>
       </section>
 
       {/* CATEGORIES GRID */}
