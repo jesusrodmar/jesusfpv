@@ -13,7 +13,7 @@ const TEXT = "#D4D4D4";
 const MUTED = "#808080";
 
 const categories = [
-  { icon: "🎬", label: "Iniciación al FPV", desc: "Conceptos básicos, simuladores y primeros pasos para volar con fluidez y seguridad.", page: "empezar" },
+  { icon: "🎬", image: "/iniciacionAlFPV.png", label: "Iniciación al FPV", desc: "Conceptos básicos, simuladores y primeros pasos para volar con fluidez y seguridad.", page: "empezar" },
   { icon: "📋", label: "Normativa y AESA", desc: "Requisitos legales, seguros y gestión documental para operar de forma profesional en España.", page: "normativa" },
   { icon: "🔧", label: "Guías", desc: "Tutoriales paso a paso, montajes y configuraciones para sacar el máximo partido a tu equipo FPV.", page: "guias" },
 ];
@@ -98,14 +98,28 @@ export default function HomePage() {
             {categories.map((c, i) => (
               <div key={i}
                 onClick={() => navigate(c.page)}
-                style={{ background: SURFACE, borderRadius: 12, border: "1px solid rgba(255,255,255,0.07)", padding: "2rem", cursor: "pointer", transition: "all 0.2s" }}
+                style={{ background: SURFACE, borderRadius: 12, border: "1px solid rgba(255,255,255,0.07)", padding: c.image ? "0" : "2rem", cursor: "pointer", transition: "all 0.2s", overflow: "hidden" }}
                 onMouseEnter={(e) => { const d = e.currentTarget as HTMLDivElement; d.style.borderColor = NEON; d.style.transform = "translateY(-3px)"; }}
                 onMouseLeave={(e) => { const d = e.currentTarget as HTMLDivElement; d.style.borderColor = "rgba(255,255,255,0.07)"; d.style.transform = "none"; }}
               >
-                <div style={{ width: 48, height: 48, borderRadius: 10, background: "rgba(204,255,0,0.1)", border: "1px solid rgba(204,255,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.4rem", marginBottom: "1.25rem" }}>{c.icon}</div>
-                <h3 style={{ fontFamily: '"Exo 2", sans-serif', fontWeight: 700, fontSize: "1.1rem", color: "#fff", marginBottom: "0.75rem" }}>{c.label}</h3>
-                <p style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "0.88rem", color: TEXT, lineHeight: 1.65, marginBottom: "1.25rem" }}>{c.desc}</p>
-                <span style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "0.85rem", fontWeight: 600, color: NEON }}>Saber más</span>
+                {c.image ? (
+                  <>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={c.image} alt={c.label} style={{ display: "block", width: "100%", height: 180, objectFit: "cover" }} />
+                    <div style={{ padding: "1.5rem 2rem 2rem" }}>
+                      <h3 style={{ fontFamily: '"Exo 2", sans-serif', fontWeight: 700, fontSize: "1.1rem", color: "#fff", marginBottom: "0.75rem" }}>{c.label}</h3>
+                      <p style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "0.88rem", color: TEXT, lineHeight: 1.65, marginBottom: "1.25rem" }}>{c.desc}</p>
+                      <span style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "0.85rem", fontWeight: 600, color: NEON }}>Saber más</span>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div style={{ width: 48, height: 48, borderRadius: 10, background: "rgba(204,255,0,0.1)", border: "1px solid rgba(204,255,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.4rem", marginBottom: "1.25rem" }}>{c.icon}</div>
+                    <h3 style={{ fontFamily: '"Exo 2", sans-serif', fontWeight: 700, fontSize: "1.1rem", color: "#fff", marginBottom: "0.75rem" }}>{c.label}</h3>
+                    <p style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "0.88rem", color: TEXT, lineHeight: 1.65, marginBottom: "1.25rem" }}>{c.desc}</p>
+                    <span style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "0.85rem", fontWeight: 600, color: NEON }}>Saber más</span>
+                  </>
+                )}
               </div>
             ))}
           </div>
