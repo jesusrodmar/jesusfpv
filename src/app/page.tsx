@@ -59,7 +59,7 @@ export default function HomePage() {
         <div style={{ maxWidth: 1280, width: "100%", margin: "0 auto", display: "flex", alignItems: "center", flexWrap: "wrap", gap: "clamp(2rem,4vw,3rem)" }}>
 
           {/* COLUMNA IZQUIERDA: texto + CTA */}
-          <div style={{ flex: "1 1 340px", maxWidth: 560 }}>
+          <div style={{ flex: "1 1 340px", maxWidth: 560, textAlign: "center" }}>
             <p style={{ fontFamily: '"Exo 2", sans-serif', fontWeight: 700, fontSize: "clamp(0.72rem, 1.2vw, 0.88rem)", color: NEON, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "1.5rem" }}>
               Experto en drones y FPV Cinemáticos
             </p>
@@ -69,7 +69,7 @@ export default function HomePage() {
               <span style={{ background: `linear-gradient(90deg, ${NEON}, ${PINK})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>ESTILO</span>
             </h1>
 
-            <p style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "clamp(0.92rem, 1.5vw, 1.05rem)", color: TEXT, lineHeight: 1.75, marginTop: "2rem", marginBottom: "2.5rem", maxWidth: 480 }}>
+            <p style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "clamp(0.92rem, 1.5vw, 1.05rem)", color: TEXT, lineHeight: 1.75, marginTop: "2rem", marginBottom: "2.5rem", maxWidth: 480, marginLeft: "auto", marginRight: "auto" }}>
               Aprende a volar, montar y configurar drones FPV, realizar grabaciones cinematográficas y ediciones profesionales con fluidez, precisión y calidad.
             </p>
 
@@ -88,8 +88,8 @@ export default function HomePage() {
             {/* Halo detrás del drone */}
             <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 55% 50%, rgba(255,0,255,0.18) 0%, rgba(204,255,0,0.06) 50%, transparent 75%)", pointerEvents: "none" }} />
             <Image
-              src="/pavo20pro.png"
-              alt="Drone FPV Pavo 20 Pro"
+              src="/drontitulohome.png"
+              alt="Drone FPV cinemático"
               width={660}
               height={500}
               style={{ objectFit: "contain", width: "100%", height: "auto", maxWidth: 620, position: "relative", filter: "drop-shadow(0 0 70px rgba(255,0,255,0.45)) drop-shadow(0 0 30px rgba(204,255,0,0.2))" }}
