@@ -55,7 +55,7 @@ export default function HomePage() {
         <div style={{ position: "absolute", top: "40%", left: "50%", transform: "translate(-50%,-50%)", width: 800, height: 800, borderRadius: "50%", background: "radial-gradient(circle, rgba(204,255,0,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
 
         <p style={{ fontFamily: '"Exo 2", sans-serif', fontWeight: 600, fontSize: "clamp(0.85rem, 1.5vw, 1rem)", color: NEON, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "1.5rem" }}>
-          Especialistas en drones y FPV, Cinemáticos
+          Experto en drones y FPV Cinemáticos
         </p>
 
         <h1 style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "clamp(2.2rem, 7vw, 5.5rem)", fontWeight: 900, lineHeight: 1.0, letterSpacing: "-0.02em", color: "#fff", textTransform: "uppercase", marginBottom: "0.5rem" }}>
@@ -64,7 +64,7 @@ export default function HomePage() {
         </h1>
 
         <p style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "clamp(0.95rem, 1.8vw, 1.15rem)", color: TEXT, lineHeight: 1.7, maxWidth: 560, margin: "2rem auto 3rem" }}>
-          Aprende a volar, montar y configurar drones FPV para grabaciones cinematográficas, con fluidez, precisión y calidad.
+          Aprende a volar, montar y configurar drones FPV, realizar grabaciones cinematográficas y ediciones profesionales con fluidez, precisión y calidad.
         </p>
 
         <button
@@ -178,30 +178,44 @@ export default function HomePage() {
 
       {/* NEWSLETTER */}
       <section style={{ background: SURFACE, borderTop: "1px solid rgba(255,255,255,0.07)", padding: "clamp(3rem,7vw,5rem) clamp(1.5rem,5vw,4rem)" }}>
-        <div style={{ maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
-          <span style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: NEON, display: "block", marginBottom: "1rem" }}>Kit de inicio FPV — Gratis</span>
+        <div style={{ maxWidth: 680, margin: "0 auto", textAlign: "center" }}>
+          <span style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: NEON, display: "block", marginBottom: "1rem" }}>Newsletter Semanal — 100% Gratis</span>
           <h2 style={{ fontFamily: '"Exo 2", sans-serif', fontWeight: 800, fontSize: "clamp(1.8rem,4vw,2.6rem)", color: "#fff", lineHeight: 1.1, marginBottom: "1rem" }}>
-            Tu guía de inicio en PDF,<br />lista para descargar
+            El mundo FPV,<br />cada semana en tu email
           </h2>
-          <p style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "0.95rem", color: TEXT, lineHeight: 1.7, marginBottom: "2rem" }}>
-            Checklist de compra, glosario FPV y ruta guiada por perfil. Sin spam. Baja cuando quieras.
+          <p style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "0.95rem", color: TEXT, lineHeight: 1.7, marginBottom: "1.8rem" }}>
+            Noticias del sector, recursos gratuitos, resumen de contenidos y ofertas exclusivas de colaboradores. Todo lo que importa en 5 minutos. Sin relleno.
           </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.55rem", justifyContent: "center", marginBottom: "2rem" }}>
+            {([
+              "📡 Últimas noticias FPV",
+              "🎁 Recursos y guías gratis",
+              "🎬 Contenidos de la semana",
+              "🤝 Ofertas de colaboradores",
+              "🔧 Configuraciones y setups",
+              "✈️ Cada viernes en tu bandeja",
+            ] as string[]).map((pill) => (
+              <span key={pill} style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "0.78rem", fontWeight: 600, color: TEXT, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 20, padding: "5px 12px", whiteSpace: "nowrap" }}>{pill}</span>
+            ))}
+          </div>
           {newsletterSent ? (
-            <div style={{ background: "rgba(204,255,0,0.08)", border: `1px solid ${NEON}40`, borderRadius: 10, padding: "1.5rem", color: NEON, fontFamily: '"Exo 2", sans-serif', fontWeight: 700, fontSize: "1.1rem" }}>
-              ✓ ¡Enviado! Revisa tu email.
+            <div style={{ background: "rgba(204,255,0,0.08)", border: `1px solid ${NEON}40`, borderRadius: 10, padding: "1.8rem", fontFamily: '"Exo 2", sans-serif' }}>
+              <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>✓</div>
+              <div style={{ color: NEON, fontWeight: 800, fontSize: "1.15rem", marginBottom: "0.4rem" }}>¡Ya estás dentro!</div>
+              <div style={{ color: TEXT, fontSize: "0.88rem" }}>Revisa tu email y confirma la suscripción. El primer número llega el próximo viernes.</div>
             </div>
           ) : (
             <form onSubmit={(e) => { e.preventDefault(); if (emailVal) setNewsletterSent(true); }} style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
               <input type="email" required placeholder="tu@email.com" value={emailVal} onChange={(e) => setEmailVal(e.target.value)}
                 style={{ flex: 1, minWidth: 220, background: "#0A0A0A", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 6, padding: "13px 16px", fontFamily: '"Exo 2", sans-serif', fontSize: "0.95rem", color: "#fff", outline: "none" }} />
               <button type="submit"
-                style={{ background: NEON, border: "none", cursor: "pointer", fontFamily: '"Exo 2", sans-serif', fontWeight: 800, fontSize: "0.9rem", color: "#000", padding: "13px 24px", borderRadius: 6, transition: "background 0.2s" }}
+                style={{ background: NEON, border: "none", cursor: "pointer", fontFamily: '"Exo 2", sans-serif', fontWeight: 800, fontSize: "0.9rem", color: "#000", padding: "13px 28px", borderRadius: 6, transition: "background 0.2s", whiteSpace: "nowrap" }}
                 onMouseEnter={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.background = PINK; b.style.color = "#fff"; }}
                 onMouseLeave={(e) => { const b = e.currentTarget as HTMLButtonElement; b.style.background = NEON; b.style.color = "#000"; }}
-              >Quiero el Kit →</button>
+              >Suscribirme gratis →</button>
             </form>
           )}
-          <p style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "0.72rem", color: MUTED, marginTop: "1rem" }}>Conforme a RGPD. Sin spam.</p>
+          <p style={{ fontFamily: '"Exo 2", sans-serif', fontSize: "0.72rem", color: MUTED, marginTop: "1rem" }}>Sin spam. Baja cuando quieras. Conforme a RGPD.</p>
         </div>
       </section>
     </div>
