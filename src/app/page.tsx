@@ -84,14 +84,12 @@ export default function HomePage() {
           </div>
 
           {/* COLUMNA DERECHA: imagen drone */}
-          <div style={{ flex: "1 1 340px", position: "relative", display: "flex", justifyContent: "center", alignItems: "center", minHeight: 380 }}>
-            {/* Halo detrás del drone */}
-            <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 55% 50%, rgba(255,0,255,0.18) 0%, rgba(204,255,0,0.06) 50%, transparent 75%)", pointerEvents: "none", zIndex: 0 }} />
+          <div style={{ flex: "1 1 340px", display: "flex", justifyContent: "center", alignItems: "center" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/drontitulohome.png"
               alt="Drone FPV cinemático"
-              style={{ display: "block", width: "100%", height: "auto", maxWidth: 620, position: "relative", zIndex: 1, filter: "drop-shadow(0 0 70px rgba(255,0,255,0.45)) drop-shadow(0 0 30px rgba(204,255,0,0.2))" }}
+              style={{ display: "block", width: "100%", height: "auto", maxWidth: 620 }}
             />
           </div>
 
