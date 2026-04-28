@@ -7,6 +7,7 @@ export const routes: Record<string, string> = {
   normativa: "/normativa",
   contacto: "/contacto",
   setup: "/setup",
+  "que-es-un-dron": "/blog/que-es-un-dron",
 };
 
 export function getRoute(page: string): string {

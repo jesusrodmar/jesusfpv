@@ -24,15 +24,7 @@ const links = [
     label: "Empezar",
     page: "empezar",
     children: [
-      {
-        label: "¿Qué es un dron?",
-        page: "empezar",
-        children: [
-          { label: "Drones estabilizados", page: "empezar" },
-          { label: "Drones FPV", page: "empezar" },
-          { label: "Glosario FPV", page: "empezar" },
-        ],
-      },
+      { label: "¿Qué es un dron?", page: "que-es-un-dron" },
       {
         label: "¿Cómo empezar?",
         page: "empezar",
